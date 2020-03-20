@@ -1,0 +1,17 @@
+
+body{
+    margin: 0;
+}
+
+.outer{
+    width: 500px;
+    height: 500px;
+    background-color: blue;
+    overflow: hidden;
+}
+.inner{
+    width: 100px;
+    height: 100px;
+    background-color: brown;
+    margin: 10px 5px 20px 10px;
+}

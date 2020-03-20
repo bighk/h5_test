@@ -13,6 +13,13 @@ a{
     text-decoration: none;
     color: #222;
 }
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
 div{
     box-sizing: border-box;
 }
@@ -59,7 +66,7 @@ div{
     color: #666;
     border-radius: 5px;
     margin: 7px 10px;
-    padding-left: 15px;
+    padding-left: 25px;
     flex: 1;
     box-shadow: 0 2px 4px rgba(0, 0, 0, .2);
 }
@@ -70,6 +77,80 @@ div{
     width: 15px;
     height: 15px;
     left: 5px;
+    top: 5px;
     background: url(../images/sprite.png) no-repeat -59px -279px;
     background-size: 104px auto;
+}
+
+.focus{
+   padding-top: 44px;
+}
+
+.focus img{
+    width: 100%;
+}
+
+.local-nav{
+    display: flex;
+    height: 64px;
+    background-color: #fff;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.local-nav li{
+    flex: 1;
+}
+
+.local-nav a{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+ 
+}
+
+.local-nav li [class^="local-nav-icon"]{
+    width: 32px;
+    height: 32px;
+    margin-top: 8px;
+    background: url(../images/localnav_bg.png) no-repeat 0 0;
+    background-size: 32px auto; 
+}
+
+.local-nav li .local-nav-icon-icon2 {
+    background-position: 0 -32px;
+}
+
+.local-nav li .local-nav-icon-icon3 {
+    background-position: 0 -64px;
+}
+
+.local-nav li .local-nav-icon-icon4 {
+    background-position: 0 -96px;
+}
+
+.local-nav li .local-nav-icon-icon5 {
+    background-position: 0 -128px;
+}
+
+nav{
+    background-color: red;
+    border-radius: 8px;
+     
+}
+
+.nav-common {
+    height: 100px;
+    display: flex;
+    background-color: pink;
+}
+
+.nav-items {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-items a{
+    flex: 1;
 }

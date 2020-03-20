@@ -1,0 +1,17 @@
+
+body{
+    margin: 0;
+}
+
+.top{
+    width: 500px;
+    height: 500px;
+    background-color: blue;
+    margin: 0px 0px 20px 0px;
+}
+.bottom{
+    width: 20px;
+    height: 20px;
+    background-color: brown;
+    margin: 10px 5px 10px 10px;
+}
