@@ -134,17 +134,21 @@ div{
 }
 
 nav{
-    background-color: red;
+    
     border-radius: 8px;
-     
+    margin: 0 4px 3px; 
+    overflow: hidden;
 }
 
 .nav-common {
-    height: 100px;
+    height: 88px;
     display: flex;
     background-color: pink;
 }
 
+.nav-common:nth-child(2){
+    margin: 3px 0;
+}
 .nav-items {
     flex: 1;
     display: flex;
@@ -153,4 +157,22 @@ nav{
 
 .nav-items a{
     flex: 1;
+    text-align: center;
+    line-height: 44px;
+    color:#fff;
+    font-size: 14px;
+    text-shadow: 1px 1px rgba(0, 0, 0, .2);
+}
+
+.nav-items a:nth-child(1) {
+    border-bottom: 1px solid #fff; 
+ }
+
+ .nav-items:nth-child(1) a {
+    border: 0;
+    background: url(../images/hotel.png) no-repeat bottom center;
+    background-size: 121px auto;
+}
+.nav-items a:nth-child(2){
+    font-size: 20px;
 }
