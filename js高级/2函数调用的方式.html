@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function fn(){
+            console.log("fn函数调用");
+        }
+        
+        fn();
+    
+        fn.call();
+  
+       function arg(a){
+         console.log('有参数的方法，参数是'+a);
+       }
+
+       arg('a');
+       arg.call(this,'b');
+
+     //花括号代表是一个对象
+     var a ={
+         sayHi: function(){
+           
+         }
+     }
+
+     a.sayHi();
+    
+     //构造函数
+     function Star(){
+
+     }
+
+     new Star();
+
+
+     (function(){
+        console.log('立即执行'); 
+     })();
+     
+    </script>
+</body>
+</html>
