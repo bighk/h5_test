@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>点击</button>
+    <script>
+        function fn(){
+            console.log("普通函数的"+this);
+        }
+
+        fn();
+        window.fn();
+
+        var o= {
+           sayHi:function(){
+              console.log('对象的方法'+this);
+           }
+        }
+
+        //对象的方法
+        o.sayHi();
+
+
+        //构造函数的this应该是对象
+        function Star(){
+            Star.prototype.sing = function(){
+              console.log("构造函数的this = "+this);
+            }
+        }
+
+       var ldh = new Star();
+       ldh.sing();
+        
+       //this代表调用者，这里应该是button 
+       var btn  = document.querySelector('button');
+       btn.onclick = function(){
+           console.log("onclick 的 this"+this);
+       }
+
+       //应该是window
+       window.setTimeout(function(){
+          console.log("setTimeout 的 this"+this);
+       },1000);
+
+       (function(){
+           console.log('立即执行函数的this'+this);
+       })();
+
+    </script>
+</body>
+</html>
