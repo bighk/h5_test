@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Father(name,age) {
+           this.name = name;
+           this.age = age;
+        }
+        Father.prototype.money = function(){
+            console.log('我有'+1000+"元");
+        }
+
+        function Son(name,age,score){
+            Father.call(this,name,age);
+            this.score = score;
+        }
+
+        //原型如果指向父的原型，增加的方法也会修改父类的原型
+        //Son.prototype = Father.prototype;
+
+        //原型如实父类的对象，对象的原型会有方法，修改也不会修改到父类的原型
+        Son.prototype = new Father();
+        Son.prototype.constructor = Son;
+        
+        Son.prototype.exam = function(){
+            console.log('开始考试');
+        }
+
+        var son = new Son('hk',30,100);
+        console.log(Son.prototype);
+        
+        console.log(Father.prototype);
+
+    </script>
+
+</body>
+
+</html>

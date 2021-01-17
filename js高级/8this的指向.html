@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Star(name,age){
+            this.name = name;
+            this.age = age;
+        }
+        var that;
+        Star.prototype.sing = function(){
+            console.log('開始唱歌');
+            that = this;
+        }
+
+        var ldh = new Star('劉德華',22);
+        ldh.sing();
+        console.log(ldh === that);
+    </script>
+
+</body>
+
+</html>

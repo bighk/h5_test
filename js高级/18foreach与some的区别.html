@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var arr = ['red', 'blue', 'pink'];
+        //foreach
+        //return 不会退出
+        //但是会退出这场循环
+        arr.forEach(function (vaule, index) {
+            if (vaule == 'blue') {
+                console.log('get');
+                return true;
+            }
+            console.log('foreach end');
+        });
+
+
+        arr.some(function(value,index){
+            if (value == 'blue') {
+                console.log('get');
+                return true;
+            }
+            console.log('some end');
+        });
+    </script>
+</body>
+
+</html>
